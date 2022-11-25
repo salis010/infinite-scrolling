@@ -1,5 +1,5 @@
 {
-  "name": "game-presenters",
+  "name": "infinite-scrolling",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,24 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@salis010:salis010/game-presenters.git"
+    "url": "git@salis010:salis010/infinite-scrolling.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.7.2",
     "express": "^4.17.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "redux": "^4.1.2",
-    "redux-devtools-extension": "^2.13.9"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.0",	
     "css-loader": "^6.6.0",
-    "jest": "^27.4.7",
     "mini-css-extract-plugin": "^2.5.3",
     "postcss-loader": "^6.2.1",
     "tailwindcss": "^3.0.18",
