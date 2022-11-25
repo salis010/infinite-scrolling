@@ -4,6 +4,8 @@ This app implements infinite scrolling with an Intesection Observer API (https:/
 
 Styling is implemented with Tailwind.
 
+It obtains images from the picsum api.
+
 ## How to install and run
 In a terminal execute:
 ```
