@@ -110,3 +110,29 @@ useEffect(() => {
   }
 })
 ```
+
+## Disconnect an Intersection Observer
+
+In some cases, the code would be more complex than this example, such as when there is more rendering taking place, such as with some variables stored in Redux.
+
+In this example code, an Intersection Observer is being created with every render. These persist between renders. One good test is to trigger intersections several times by scrolling down, and then scrolling back up: past elements that were being observered should not re-trigger infinite scrolling.
+
+If this problem happens, disconnect an Intersection Observer in a useEffect:
+```
+if (refObserver.current !== null) {
+  refObserver.current.disconnect()
+}
+```
+
+## View the element targeted by the Intersection Observer
+`entries` can be accessed and the inner html for the element output to console:
+```
+const intersectionObserverCallback = (entries: IntersectionObserverEntry[]): void => {
+  if (entries[0].isIntersecting) {
+    console.log('Callback:', entries[0]?.target?.querySelector('div')?.querySelector('span')?.innerHTML)
+    setPageNum(n => n + 1)
+  }
+}
+```
+
+
